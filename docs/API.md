@@ -657,6 +657,34 @@ The board list endpoint supports setting an `If-Modified-Since` header to limit 
 
 ##### 200 Success
 
+### PUT /boards/{boardId}/stacks/{stackId}/cards/{cardId}/archive - Archive a card
+
+#### Request parameters
+
+| Parameter | Type    | Description                             |
+| --------- | ------- | --------------------------------------- |
+| boardId   | Integer | The id of the board the card belongs to |
+| stackId   | Integer | The id of the stack the card belongs to |
+| cardId    | Integer | The id of the card                      |
+
+#### Response
+
+##### 200 Success
+
+### PUT /boards/{boardId}/stacks/{stackId}/cards/{cardId}/unarchive - Unarchive a card
+
+#### Request parameters
+
+| Parameter | Type    | Description                             |
+| --------- | ------- | --------------------------------------- |
+| boardId   | Integer | The id of the board the card belongs to |
+| stackId   | Integer | The id of the stack the card belongs to |
+| cardId    | Integer | The id of the card                      |
+
+#### Response
+
+##### 200 Success
+
 ### DELETE /boards/{boardId}/stacks/{stackId}/cards/{cardId} - Delete a card
 
 #### Request parameters
