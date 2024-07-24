@@ -123,11 +123,6 @@ class CardApiControllerTest extends \Test\TestCase {
 		$card = new Card();
 		$card->setId($this->cardExample['id']);
 
-		$this->request->expects($this->once())
-			->method('getParam')
-			->with('cardId')
-			->will($this->returnValue($this->cardExample['id']));
-
 		$this->cardService->expects($this->once())
 			->method('archive')
 			->willReturn($card);
@@ -140,11 +135,6 @@ class CardApiControllerTest extends \Test\TestCase {
 	public function testUnArchive() {
 		$card = new Card();
 		$card->setId($this->cardExample['id']);
-
-		$this->request->expects($this->once())
-			->method('getParam')
-			->with('cardId')
-			->will($this->returnValue($this->cardExample['id']));
 
 		$this->cardService->expects($this->once())
 			->method('unarchive')

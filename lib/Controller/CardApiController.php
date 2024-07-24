@@ -160,7 +160,7 @@ class CardApiController extends ApiController {
 	 * Archive card
 	 */
 	public function archive($cardId) {
-		$card = $this->cardService->archive($this->request->getParam('cardId'));
+		$card = $this->cardService->archive($cardId);
 		return new DataResponse($card, HTTP::STATUS_OK);
 	}
 
@@ -172,7 +172,7 @@ class CardApiController extends ApiController {
 	 * Unarchive card
 	 */
 	public function unarchive($cardId) {
-		$card = $this->cardService->unarchive($this->request->getParam('cardId'));
+		$card = $this->cardService->unarchive($cardId);
 		return new DataResponse($card, HTTP::STATUS_OK);
 	}
 
